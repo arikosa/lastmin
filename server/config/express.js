@@ -100,10 +100,8 @@ module.exports = {
         app.use("/static", express.static(path.resolve(__dirname, '..', '..', 'client', 'public')));
 
         // TODO: move this to /config/mongodb.javascript
-        // mongoose.connect('mongodb://ecommerce-dev:20150816@ds033163.mongolab.com:33163/ecommerce');
-        // mongoose.connect('mongodb://localhost:27017');
         mongoose.connect('mongodb://lastmin:ariKosa2230@ds135669.mlab.com:35669/lastmin');
-        // logger.info('MongoDB is running on mongolab!!');
+        logger.info('MongoDB is running on mongolab!!');
 
         // Creating routes
         routes.create(path.resolve(__dirname, '..', endpoint.root.directory), endpoint.root.route, app, passport, express.Router());
@@ -112,8 +110,6 @@ module.exports = {
 };
 
 var mongooseConnect = function mongooseConnect() {
-    // mongoose.connect('mongodb://ecommerce-dev:20150816@ds033163.mongolab.com:33163/ecommerce');
-    // mongoose.connect('mongodb://localhost:27017');
     mongoose.connect('mongodb://lastmin:ariKosa2230@ds135669.mlab.com:35669/lastmin');
 };
 

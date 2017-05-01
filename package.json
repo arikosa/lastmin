@@ -9,10 +9,6 @@
     "start": "node ./server/server.js",
     "test": "mocha ./server/test --reporter spec"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/marcusvas/nodejs-sample.git"
-  },
   "keywords": [
     "mvc",
     "express.js",
